@@ -21,15 +21,17 @@ class App extends Component {
   handleSubmit = async (query) => {
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&key=AIzaSyB3i7AApT73is_nB6cCuxqOw9LTFPovMXw&q=${query}`;
     const res = await axios.get(url);
-    console.log(res)
 
     this.setState({
       videos: res.data.items, selectedVideo: res.data.items[0],
     })
   }
 
-  handleClick = (e) => {
-    console.log(this.state)
+ 
+  onVideoSelect = (video) => {
+    this.setState({
+      selectedVideo: video,
+    })
   }
 
   render() {
@@ -39,7 +41,7 @@ class App extends Component {
           <Search onFormSubmit={this.handleSubmit}/>
         </div>
         <Video video={this.state.selectedVideo}/>
-        {/* <VideoList list={this.state.videos}/> */}
+        <VideoList videos={this.state.videos} onVideoSelect={this.onVideoSelect} />
       </div>
     )
   }

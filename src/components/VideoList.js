@@ -1,21 +1,15 @@
 import React, { Component } from 'react'
 
-class VideoList extends Component {
+import VideoItem from './VideoItem'
 
-    constructor(props) {
-        super(props)
-    }
+const VideoList = ({videos, onVideoSelect}) => {
 
+    const sidePanel = videos.map((video, id) => {
+        return <VideoItem key={id} video={video} onVideoSelect={onVideoSelect}/>;
+    })
 
-    render() {
-        return (
-            <div>
-                <div>
-                    {/* <iframe src="" */}
-                </div>
-            </div>
-        )
-    }
+    return sidePanel;
+
 }
 
 export default VideoList;
