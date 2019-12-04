@@ -1,9 +1,19 @@
 import React, { Component } from 'react'
 
 class VideoList extends Component {
+
+    constructor(props) {
+        super(props)
+    }
+
+
     render() {
         return (
-            <h1>VideoList</h1>
+            <div>
+                <div>
+                    {/* <iframe src="" */}
+                </div>
+            </div>
         )
     }
 }

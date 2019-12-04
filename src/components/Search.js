@@ -18,6 +18,8 @@ class Search extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
+        const { onFormSubmit } = this.props
+        onFormSubmit(this.state.query)
     }
 
     render() {
