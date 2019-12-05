@@ -8,7 +8,7 @@ const VideoList = ({videos, onVideoSelect}) => {
         return <VideoItem key={id} video={video} onVideoSelect={onVideoSelect}/>;
     })
 
-    return sidePanel;
+    return <div className="side-panel">{sidePanel}</div>;
 
 }
 

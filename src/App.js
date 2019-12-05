@@ -40,8 +40,10 @@ class App extends Component {
         <div className="search-cont">
           <Search onFormSubmit={this.handleSubmit}/>
         </div>
-        <Video video={this.state.selectedVideo}/>
-        <VideoList videos={this.state.videos} onVideoSelect={this.onVideoSelect} />
+        <div className="display">
+          <Video video={this.state.selectedVideo}/>
+          <VideoList videos={this.state.videos} onVideoSelect={this.onVideoSelect} />
+        </div>
       </div>
     )
   }

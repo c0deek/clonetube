@@ -1,0 +1,11 @@
+.video-item {
+    width: 25vw;
+    margin: 10%;
+    cursor: pointer;    
+    border-bottom: 1px solid rgba(0,0,0, 0.5);
+}
+
+.video-item img {
+    width: 100%;
+    border: 1px solid black;
+}
